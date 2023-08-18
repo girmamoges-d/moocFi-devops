@@ -1,0 +1,25 @@
+$ docker run -d --rm -it --name secret-msg devopsdockeruh/simple-web-service:ubuntu
+fbec97bb4c31e402298f05416116a6a4cd8b245ac24042cb1578fb1cb397af66
+
+
+$ docker image ls
+REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE
+ubuntu                              latest    01f29b872827   2 weeks ago   77.8MB
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   2 years ago   83MB
+
+
+
+$ docker exec -it secret-msg bash
+root@fbec97bb4c31:/usr/src/app#
+root@fbec97bb4c31:/usr/src/app#
+root@fbec97bb4c31:/usr/src/app# tail -f text.log
+2023-08-18 08:56:15 +0000 UTC
+2023-08-18 08:56:17 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-08-18 08:56:19 +0000 UTC
+2023-08-18 08:56:21 +0000 UTC
+2023-08-18 08:56:23 +0000 UTC
+2023-08-18 08:56:25 +0000 UTC
+2023-08-18 08:56:27 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
